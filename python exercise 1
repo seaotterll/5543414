@@ -5,8 +5,6 @@ def case_counter(text):
     
     return uppercase_count, lowercase_count
 
-
-
     pass
 
 
