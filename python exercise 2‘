@@ -1,0 +1,65 @@
+def morse_translator(text):
+    # Morse code mapping
+    morse_code_dict = {
+        "A": ".-",
+        "B": "-...",
+        "C": "-.-.",
+        "D": "-..",
+        "E": ".",
+        "F": "..-.",
+        "G": "--.",
+        "H": "....",
+        "I": "..",
+        "J": ".---",
+        "K": "-.-",
+        "L": ".-..",
+        "M": "--",
+        "N": "-.",
+        "O": "---",
+        "P": ".--.",
+        "Q": "--.-",
+        "R": ".-.",
+        "S": "...",
+        "T": "-",
+        "U": "..-",
+        "V": "...-",
+        "W": ".--",
+        "X": "-..-",
+        "Y": "-.--",
+        "Z": "--..",
+    }
+
+    text = text.upper()
+#The function should handle both uppercase and lowercase alphabetic characters.
+#The function should be case-insensitive, meaning it treats uppercase and lowercase letters the same.
+    morse_text = []
+    LLL = ""
+
+    for character in morse_code_dict:
+        morse_text.append(character)
+    #print(morse_text)
+
+    for xx in text:
+        if xx in morse_text:
+            LLL=LLL+morse_code_dict[xx]+" "
+            #print(morse_code_dict[xx])  
+#Each alphabetic character in the string should be translated to its corresponding Morse code equivalent.
+        elif xx==" ":
+            LLL=LLL+"/"+" "
+              
+            #print("/")
+#Each word in the string should be separated by a forward slash (/).
+
+#The Morse code for each character should be separated by a space.
+
+        else:
+            pass
+#Non-alphabetic characters (like numbers or symbols) should not be translated.
+
+    print(LLL)
+
+# Test cases
+morse_translator("HELLO WORLD")# Expected output: ".... . .-.. .-.. --- / .-- --- .-. .-.. -.."
+morse_translator("Python") # Expected output: ".--. -.-- - .... --- -."
+morse_translator("Morse Code")
+ # Expected output: "-- --- .-. ... . / -.-. --- -.. ."
