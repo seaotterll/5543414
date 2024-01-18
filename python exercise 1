@@ -7,7 +7,6 @@ def case_counter(text):
 
     pass
 
-
 # Test cases
 print(
     case_counter("Hello World!")
@@ -17,3 +16,35 @@ print(case_counter("python"))  # Expected: Uppercase letters: 0, Lowercase lette
 print(case_counter("1234!@#$"))  # Expected: Uppercase letters: 0, Lowercase letters: 0
 print(case_counter("SeaotterlLL"))
 
+
+
+
+
+def case_counter(text):
+    
+    uppercase_count = sum(1 for xx in text if xx.isupper())
+    lowercase_count = sum(1 for xx  in text if xx.islower())
+    print(uppercase_count, lowercase_count)
+case_counter("xx")
+
+
+(case_counter("Hello World!"))  # Expected: Uppercase letters: 2, Lowercase letters: 8
+(case_counter("PYTHON"))  # Expected: Uppercase letters: 6, Lowercase letters: 0
+(case_counter("python"))  # Expected: Uppercase letters: 0, Lowercase letters: 6
+(case_counter("1234!@#$"))  # Expected: Uppercase letters: 0, Lowercase letters: 0
+(case_counter("SeaotterlLL"))
+
+
+
+s=input("")
+d,x,n=0,0,0
+for xx in s:
+    if xx.isupper():
+        d+=1
+    elif xx. islower():
+        x+=1
+    elif xx.isdigit():
+        n+=1
+print(d)
+print(x)
+print(n)
