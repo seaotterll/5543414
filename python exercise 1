@@ -17,6 +17,7 @@ print(case_counter("1234!@#$"))  # Expected: Uppercase letters: 0, Lowercase let
 print(case_counter("SeaotterlLL"))
 
 
+#
 
 
 
@@ -34,6 +35,8 @@ case_counter("xx")
 (case_counter("1234!@#$"))  # Expected: Uppercase letters: 0, Lowercase letters: 0
 (case_counter("SeaotterlLL"))
 
+
+#
 
 
 s=input("")
