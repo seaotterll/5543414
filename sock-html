@@ -1,0 +1,127 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, in.0">
+    <title>Socks Page</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <nav id="breadcrumbs">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Accessories</a></li>
+            <li><a href="#">Socks</a></li>
+        </ul>
+    </nav>
+    <h1 class="product-title">Union Jack Socks - Navy</h1>
+
+    <section class="product-image">
+        <img src="images/sock.jpg" width="500px" alt="Union Jack Socks">
+        <img src="images/sock.2.jpg" width="500px" alt="Union Jack Socks">
+        <span class="inline-element>Inline.Test"></span>
+    </section>
+
+    <section class="product-options">
+        <div class="size-options">
+            <button>6 - 10</button>
+            <button>10.5 - 13</button>
+
+            <div class="quantity">
+                <label for="quantity">Quantity:</label>
+                <select name="quantity" id="quantity">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            <p class="price">Price: £9.99</p>
+            <button class="add-to-bag">Add to bag</button>
+            <section>
+
+                <section class="product-description">
+                    <h2>Product Description</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing eli necessitatibus aliquam molestias deserunt
+                        amet
+                        hic.</p>
+                    <ul>
+                        <li>product feature1</li>
+                        <li>product feature2</li>
+                        <li>product feature3</li>
+                    </ul>
+                </section>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Delivery Option</th>
+                            <th>Price</th>
+                            <th>Estimated Delivery</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Standard Delivery</td>
+                            <td>$4.99</td>
+                            <td>3 - 5 Working Days</td>
+                        </tr>
+                        <tr>
+                            <td>Next Day Delivery</td>
+                            <td>$7.99</td>
+                            <td>Next Working Days</td>
+                        </tr>
+                        <td>Next Day Delivery</td>
+                        <td>$7.99</td>
+                        <td>Next Working Days</td>
+
+                        <tr>
+                            <td>Click & Collect</td>
+                            <td>Free</td>
+                            <td>Same Day</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+                <section class="customer-reviews">
+                    <h2>Customer Reviews</h2>
+                    <article class="review">
+                        <h3>Review Title 1</h3>
+                        <p>★★★★☆</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    </article>
+                    <article class="review">
+                        <h3>Review Title 2</h3>
+                        <p>★★★★★</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et expedita quo nisi nihil, aliquid
+                            at!
+                        </p>
+                    </article>
+                    <article class="review">
+                        <h3>Review Title 3</h3>
+                        <p>★★★★★</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus recusandae, atque quo
+                            inventore
+                            eligendi mollitia quia, ut architecto corporis, perferendis reprehenderit! Quia corporis
+                            repellat
+                            officiis tempore quas odio quisquam earum.</p>
+                    </article>
+                </section>
+
+</body>
+
+</html>
+
+</tbody>
+
+<p>$20.00</p>
+<button>Add to bag</button>
+
+</section>
+</body>
+
+</html>
