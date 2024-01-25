@@ -38,7 +38,7 @@ def morse_translator(text):
         if xx in morse_text:
           L=L+morse_code_dict[xx]
         elif xx==" ":
-            L=L+"/"+""
+            L=L+"/"+" "
         else:
           pass 
     print(L)
