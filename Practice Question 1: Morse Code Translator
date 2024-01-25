@@ -1,0 +1,49 @@
+def morse_translator(text):
+
+    morse_code_dict = {
+        "A": ".-",
+        "B": "-...",
+        "C": "-.-.",
+        "D": "-..",
+        "E": ".",
+        "F": "..-.",
+        "G": "--.",
+        "H": "....",
+        "I": "..",
+        "J": ".---",
+        "K": "-.-",
+        "L": ".-..",
+        "M": "--",
+        "N": "-.",
+        "O": "---",
+        "P": ".--.",
+        "Q": "--.-",
+        "R": ".-.",
+        "S": "...",
+        "T": "-",
+        "U": "..-",
+        "V": "...-",
+        "W": ".--",
+        "X": "-..-",
+        "Y": "-.--",
+        "Z": "--..",
+    }
+    text=text.upper()
+    morse_text=[]
+    L=""
+    for char in morse_code_dict:
+        morse_text.append(char)
+    
+    for xx in text:
+        if xx in morse_text:
+          L=L+morse_code_dict[xx]
+        elif xx==" ":
+            L=L+"/"+""
+        else:
+          pass 
+    print(L)
+    
+    
+morse_translator("HELLO WORLD")# Expected output: ".... . .-.. .-.. --- / .-- --- .-. .-.. -.."
+morse_translator("Python") # Expected output: ".--. -.-- - .... --- -."
+morse_translator("Morse Code")
