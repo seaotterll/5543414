@@ -1,0 +1,32 @@
+"""
+
+Function Parameters:
+1. P (float): Principal amount. 本金
+2. r (float): Annual interest rate in decimal. 年利率
+3. n (integer): Number of times interest is compounded per year. 复利次数
+4. t (integer): Number of years for investment. 
+
+Instructions:
+- Use the formula: A = P(1 + r/n)^(nt) to calculate compound interest.
+- Return the accumulated amount A after t years.
+- Handle edge cases for inputs.
+
+"""
+
+
+def compound_interest_calculator(P, r, n, t):
+  if P<0 or r<0 or n<=0 or t<0:
+      return "error"
+  P=float(P)
+  r=float(r)
+  n=int(n)
+  t=int(t)
+  A = P*(1 + r/n)**(n*t)
+  return str(float(A)) + " after " + str(int(t)) + " years"
+  
+
+
+# Test cases
+print(compound_interest_calculator(1000, 0.05, 12, 5))  # Expected: Amount after 5 years
+print(compound_interest_calculator(500, 0.07, 4, 10))  # Expected: Amount after 10 years
+print(compound_interest_calculator(1500, 0.03, 6, 7))  # Expected: Amount after 7 years
