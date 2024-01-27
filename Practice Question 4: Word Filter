@@ -1,0 +1,41 @@
+import string
+def word_filter_counter(text, filter_words):
+    #filter_words=filter_words.upper()  此为 list string  list object has no attribute 'upper'
+   text = text.translate(str.maketrans('', '', string.punctuation))
+   # 将所有标点符号从文本中移除。这样做是为了确保单词在比较时不包含标点。
+   # 例如："hello!" 和 "hello" 将被视为相同的单词。
+   text=text.lower()
+   words = text.split()  
+#将文本分割成单词列表 得到单独的单词
+   word_counter={}
+   for xx in filter_words:
+       word_counter[xx.lower()]=0
+# xx represents each item in the filter_words 计数初始为0
+   for yy in words:
+       if yy in word_counter:
+           word_counter[yy]+=1
+           
+   return word_counter
+                        
+
+
+#Function Parameters:
+#1. text (string): The text from which words will be filtered and counted.
+#2. filter_words (list of strings): A list of words to be filtered out from the text.
+
+#Instructions:
+#- The function should filter out the words from the text that are present in the filter_words list. The comparison should be case-insensitive.
+#- The function should return a dictionary. In this dictionary, the keys are the filtered words, and the values are the counts of how often these words appeared in the text.
+#- The text may contain punctuation marks and spaces. Only whole words, separated by spaces or punctuation, should be considered.
+
+
+# Test cases
+print(word_filter_counter("Hello world, hello!", ["hello"]))
+# Expected output: {'hello': 2}
+print(word_filter_counter("The quick brown fox.", ["the"]))
+# Expected output: {'the': 1}
+print(word_filter_counter("Is this real life? Is this just fantasy?", ["is", "this", "just"]))
+# Expected output: {'is': 2, 'this': 2, 'just': 1}
+print(word_filter_counter("Do we see the big picture or just small details?", ["we", "the", "or"]))
+# Expected output: {'we': 1, 'the': 1, 'or': 1}
+
