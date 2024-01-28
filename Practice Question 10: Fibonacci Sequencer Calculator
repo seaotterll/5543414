@@ -1,0 +1,45 @@
+"""
+
+Objective:
+Write a function named 'fibonacci_sequence' to generate the Fibonacci sequence up to a given number using a while loop.
+
+Function Parameter:
+1. max_value (integer): Maximum value for the Fibonacci sequence.
+
+Instructions:
+- Use a while loop to generate the Fibonacci sequence up to 'max_value'.
+- Return the sequence as a list.
+- Handle edge cases for 0 and negative inputs.
+
+"""
+
+def fibonacci_sequence(max_value):
+    max_value=int(max_value)
+    if max_value<0:
+        return "Empty list or error message"
+#  写不下去了！！！！！！！！！！！！！！
+# 如果 max_value 为 0，则返回包含单个 0 的列表
+    if max_value == 0:
+        return [0]
+
+    # 初始化斐波那契数列的前两个数字
+    fib_sequence = [0, 1]
+
+    # 使用 while 循环生成斐波那契数列
+    while fib_sequence[-1] + fib_sequence[-2] <= max_value:
+        # 计算下一个斐波那契数
+        next_fib = fib_sequence[-1] + fib_sequence[-2]
+
+        # 将新的斐波那契数添加到数列中
+        fib_sequence.append(next_fib)
+
+    return fib_sequence
+
+
+
+
+# Test cases
+print(fibonacci_sequence(10))  # Expected output: [0, 1, 1, 2, 3, 5, 8]
+print(fibonacci_sequence(1))  # Expected output: [0, 1, 1]
+print(fibonacci_sequence(0))  # Expected output: [0]
+print(fibonacci_sequence(-5))  # Expected: Empty list or error message
