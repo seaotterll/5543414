@@ -1,3 +1,4 @@
+FIRST PRACTICE
 def case_counter(text):
     
     (a,b)=0,0
@@ -14,6 +15,25 @@ def case_counter(text):
     print(a,b)  
    
 
+case_counter("Hello World!")  # Expected: Uppercase letters: 2, Lowercase letters: 8
+case_counter("PYTHON")  # Expected: Uppercase letters: 6, Lowercase letters: 0
+case_counter("python")  # Expected: Uppercase letters: 0, Lowercase letters: 6
+case_counter("1234!@#$")  # Expected: Uppercase letters: 0, Lowercase letters: 0
+
+
+SECOND PRACTICE
+
+def case_counter(text):
+    a,b=(0,0)
+    for xx in text:
+        if xx.isupper():
+            a+=1
+        if xx.islower():
+            b+=1
+    print("Uppercase letters: "+str(int(a)),"Lowercase letters: "+str(int(b)))
+            
+            
+# Test cases
 case_counter("Hello World!")  # Expected: Uppercase letters: 2, Lowercase letters: 8
 case_counter("PYTHON")  # Expected: Uppercase letters: 6, Lowercase letters: 0
 case_counter("python")  # Expected: Uppercase letters: 0, Lowercase letters: 6
