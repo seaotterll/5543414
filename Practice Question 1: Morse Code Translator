@@ -1,3 +1,5 @@
+FIRST PRACTICE
+
 def morse_translator(text):
 
     morse_code_dict = {
@@ -47,3 +49,58 @@ def morse_translator(text):
 morse_translator("HELLO WORLD")# Expected output: ".... . .-.. .-.. --- / .-- --- .-. .-.. -.."
 morse_translator("Python") # Expected output: ".--. -.-- - .... --- -."
 morse_translator("Morse Code")
+
+
+SECOND PRACTICE
+
+def morse_translator(text):
+    # Morse code mapping
+    morse_code_dict = {
+        "A": ".-",
+        "B": "-...",
+        "C": "-.-.",
+        "D": "-..",
+        "E": ".",
+        "F": "..-.",
+        "G": "--.",
+        "H": "....",
+        "I": "..",
+        "J": ".---",
+        "K": "-.-",
+        "L": ".-..",
+        "M": "--",
+        "N": "-.",
+        "O": "---",
+        "P": ".--.",
+        "Q": "--.-",
+        "R": ".-.",
+        "S": "...",
+        "T": "-",
+        "U": "..-",
+        "V": "...-",
+        "W": ".--",
+        "X": "-..-",
+        "Y": "-.--",
+        "Z": "--..",
+    }
+    text=text.upper()
+    morse_code=[]
+    L=""
+    
+    for char in morse_code_dict:
+        morse_code.append(char)
+    for xx in text:
+        if xx in morse_code:
+            L=L+" "+morse_code_dict[xx]
+        if xx==" ":
+            L=L+" "+"/"+" "
+            
+    return L
+# Test cases
+print(
+    morse_translator("HELLO WORLD")
+)  # Expected output: ".... . .-.. .-.. --- / .-- --- .-. .-.. -.."
+print(morse_translator("Python"))  # Expected output: ".--. -.-- - .... --- -."
+print(
+    morse_translator("Morse Code")
+)  # Expected output: "-- --- .-. ... . / -.-. --- -.. ."
