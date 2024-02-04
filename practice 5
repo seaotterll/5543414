@@ -1,0 +1,10 @@
+import calendar
+
+def display_calendar():
+    year = int(input("Input year: "))
+    month = int(input("Input month (1-12): "))
+    
+    print("\n")
+    print(calendar.month(year, month))
+
+display_calendar()
