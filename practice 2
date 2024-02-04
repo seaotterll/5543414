@@ -1,0 +1,39 @@
+import time
+
+def simple_alarm():
+    alarm_time = input("Set the alarm time (format HH:MM:SS): ")
+    print(f"Alarm set for {alarm_time}.")
+
+    while True:
+        current_time = time.strftime("%H:%M:%S")
+        if current_time == alarm_time:
+            print("Time's up!")
+            break
+        time.sleep(1)
+
+simple_alarm()
+
+def validate_time(input_time):
+    try:
+        time.strptime(input_time, "%H:%M:%S")
+        return True
+    except ValueError:
+        return False
+
+def simple_alarm():
+    while True:
+        alarm_time = input("Set the alarm time (format HH:MM:SS): ")
+        if validate_time(alarm_time):
+            break
+        print("Invalid time format. Please try again.")
+
+    print(f"Alarm set for {alarm_time}.")
+
+    while True:
+        current_time = time.strftime("%H:%M:%S")
+        if current_time == alarm_time:
+            print("Time's up!")
+            break
+        time.sleep(1)
+
+simple_alarm()
